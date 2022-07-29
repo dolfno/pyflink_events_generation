@@ -3,7 +3,6 @@ import os
 from pyflink.datastream import StreamExecutionEnvironment
 from pyflink.table import StreamTableEnvironment
 
-
 from event_detection import EventDetection
 from flink_io.measurements_source import create_measurements_env
 from flink_io.sink_jdbc import create_event_sink_table, create_values_sink_table

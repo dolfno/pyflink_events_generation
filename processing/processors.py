@@ -1,7 +1,8 @@
-from dataclasses import dataclass
-from typing import Any, Callable, List
-import numpy as np
 import logging
+from dataclasses import dataclass
+from typing import Any, List
+
+import numpy as np
 
 BUILDIN_FUNCTIONS = {
     "mean": lambda v, d: float(sum(d * np.array(v[:-1]).astype(float)) / sum(d)),

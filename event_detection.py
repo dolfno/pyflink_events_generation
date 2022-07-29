@@ -1,18 +1,11 @@
-"""going strong
-TODO:
-* keep event id and store with values
-* to check, also add counter by default.
-"""
-from sqlite3 import Timestamp
-from pyflink.common.typeinfo import Types
-
-from pyflink.datastream.functions import RuntimeContext, FlatMapFunction
-from pyflink.datastream.state import ValueStateDescriptor
-
 import logging
 
-from processing.processors import ValueProcessor, BUILDIN_FUNCTIONS
+from pyflink.common.typeinfo import Types
+from pyflink.datastream.functions import FlatMapFunction, RuntimeContext
+from pyflink.datastream.state import ValueStateDescriptor
+
 from flink_types.processed_measurements import ProcessedMeasurements
+from processing.processors import ValueProcessor
 
 MAX_VALUE_SLOTS = 10
 
